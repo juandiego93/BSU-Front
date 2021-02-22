@@ -1,0 +1,34 @@
+<div class="container text-center mt-5">
+	<div id="cards">
+		<figure class="card card--normal">
+			<div class="card__image-container">
+				<img src="../../../assets/data/imgs/{{empleado?.id}}.png" alt="Eevee" class="card__image">
+			</div>
+			<figcaption class="card__caption">
+				<h1 class="card__name">{{empleado?.employee_name}}</h1>
+				<div class="card__abilities text-center">
+					<h4 class="card__ability">
+						<span class="card__label" style="font-size: 15px;">Salario</span>
+						<br>
+						<small>
+							{{empleado?.employee_salary | currency}}
+						</small>
+					</h4>
+					<h4 class="card__ability text-center">
+						<span class="card__label" style="font-size: 15px;">Opciones</span>
+						<br>
+						<div class="row ">
+							<div class="col card__label">
+								<button class="btn btn-primary" (click)="deleteEmployee(empleado?.id)">
+									<small>
+										Eliminar
+									</small>
+								</button>
+							</div>
+						</div>
+					</h4>
+				</div>
+			</figcaption>
+		</figure>
+	</div>
+</div>

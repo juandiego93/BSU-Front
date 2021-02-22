@@ -1,0 +1,20 @@
+<div class="card mt-1">
+	<img class="card-img-top" src="assets/data/imgs/{{empleado.id}}.png" alt="Card image cap">
+	<div class="card-body text-center">
+		<h5 class="card-title text-center">
+			{{empleado.employee_name}}
+		</h5>
+		<div class="card-text">
+			<hr>
+			<h6>
+				Datos del empleado:
+			</h6>
+			<div class="row">
+				<div class="col">{{empleado.employee_age}} </div>
+				<div class="col">{{empleado.employee_salary}} </div>
+			</div>
+		</div>
+		<hr>
+		<button (click)="viewEmpleado()" class="btn btn-primary">Ver más</button>
+	</div>
+</div>

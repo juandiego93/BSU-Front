@@ -1,0 +1,13 @@
+<h2 class="text-center">Buscaste por: <small>{{value}}</small> y coinciden {{empleados.length}} resultados</h2>
+<hr>
+<div class="row" *ngIf="empleados.length == 0">
+	<div class="col-md-12">
+		<div class="alert alert-info" role="alert">
+			! No existen coincidencias con el termino buscado: {{value}} ¡
+		</div>
+	</div>
+</div>
+<div class="card-columns">
+	<app-empleado-tarjeta [empleado]="empleado" [index]="empleado.id" *ngFor="let empleado of empleados; let i = index">
+	</app-empleado-tarjeta>
+</div>
